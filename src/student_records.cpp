@@ -64,7 +64,7 @@ int findStudentById(const Student students[], int size, string targetId) {
     // Search by comparing students[i].id to targetId.
     // Return the index of the matching student.
     // Return -1 if no student is found.
-    if (students == NULL || size <= 0)
+    if (students == NULL || size <= 0) return -1;
     for (int i = 0; i < size; i++){
         if (students[i].id == targetId) return i;
     }
