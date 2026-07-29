@@ -39,7 +39,7 @@ double calculateAverageScore(const Student students[], int size) {
     // TODO:
     // If the array is null or size is invalid, return 0.0.
     // Otherwise, return the average score.
-    if (size == NULL || size <= 0) return 0;
+    if (students == NULL || size <= 0) return 0;
     double sum = 0;
     for (int i = 0; i < size; i++){
         sum += students[i].score;
@@ -51,7 +51,7 @@ double findHighestScore(const Student students[], int size) {
     // TODO:
     // If the array is null or size is invalid, return 0.0.
     // Otherwise, return the highest score.
-    if (size == NULL || size <= 0) return 0;
+    if (students == NULL || size <= 0) return 0;
     double highest = students[0].score;
     for (int i = 1; i < size; i++){
         if (students[i].score > highest) highest = students[i].score;
@@ -64,6 +64,7 @@ int findStudentById(const Student students[], int size, string targetId) {
     // Search by comparing students[i].id to targetId.
     // Return the index of the matching student.
     // Return -1 if no student is found.
+    if (students == NULL || size <= 0)
     for (int i = 0; i < size; i++){
         if (students[i].id == targetId) return i;
     }
