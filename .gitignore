@@ -1,4 +1,5 @@
 main
+test_student_records
 test_receipt
 build
 *.o
